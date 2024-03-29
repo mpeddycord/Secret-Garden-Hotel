@@ -1,3 +1,4 @@
 {
-  "/not-found": "app/not-found.js"
+  "/(web)/auth/page": "app/(web)/auth/page.js",
+  "/(cms)/studio/[[...index]]/page": "app/(cms)/studio/[[...index]]/page.js"
 }
