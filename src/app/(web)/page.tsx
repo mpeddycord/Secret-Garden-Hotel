@@ -1,7 +1,11 @@
-import Image from "next/image";
+import HeroSection from "@/src/components/HeroSection/HeroSection";
 
-export default function Home() {
+const Home = () => {
   return (
-    <>Home</>
+    <>
+      <HeroSection />
+    </>
   );
-}
+};
+
+export default Home;
