@@ -1,6 +1,6 @@
 'use client';
 
-import { Room } from "@/src/app/models/room";
+import { Room } from "@/src/models/room";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";

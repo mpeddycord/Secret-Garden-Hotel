@@ -26,10 +26,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(web)/error.js"
     ],
-    "/not-found": [
+    "/(web)/rooms/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/not-found.js"
+      "static/chunks/app/(web)/rooms/page.js"
+    ],
+    "/(web)/rooms/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(web)/rooms/[slug]/page.js"
     ]
   }
 }
