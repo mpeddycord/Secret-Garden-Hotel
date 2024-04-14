@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest --watch",
+    "cypress": "cypress open"
   },
   "dependencies": {
     "@sanity/vision": "^3.36.2",
@@ -22,12 +24,17 @@
     "swr": "^2.2.5"
   },
   "devDependencies": {
+    "@testing-library/react": "^15.0.1",
+    "@testing-library/user-event": "^14.5.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "cypress": "^13.7.3",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"

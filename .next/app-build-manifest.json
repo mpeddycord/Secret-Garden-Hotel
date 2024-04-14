@@ -35,6 +35,16 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(web)/rooms/[slug]/page.js"
+    ],
+    "/(cms)/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(cms)/layout.js"
+    ],
+    "/(cms)/studio/[[...index]]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(cms)/studio/[[...index]]/page.js"
     ]
   }
 }
