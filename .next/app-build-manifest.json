@@ -6,45 +6,31 @@
       "static/css/app/(web)/layout.css",
       "static/chunks/app/(web)/layout.js"
     ],
-    "/(web)/page": [
+    "/(web)/error": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(web)/page.js"
-    ],
-    "/(web)/auth/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(web)/auth/page.js"
+      "static/chunks/app/(web)/error.js"
     ],
     "/(web)/loading": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(web)/loading.js"
     ],
-    "/(web)/error": [
+    "/(web)/rooms/[slug]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(web)/error.js"
+      "static/css/app/(web)/rooms/[slug]/page.css",
+      "static/chunks/app/(web)/rooms/[slug]/page.js"
+    ],
+    "/(web)/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(web)/page.js"
     ],
     "/(web)/rooms/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(web)/rooms/page.js"
-    ],
-    "/(web)/rooms/[slug]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(web)/rooms/[slug]/page.js"
-    ],
-    "/(cms)/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(cms)/layout.js"
-    ],
-    "/(cms)/studio/[[...index]]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(cms)/studio/[[...index]]/page.js"
     ]
   }
 }

@@ -10,7 +10,7 @@ import Toast from "@/src/components/Toast/Toast";
 const poppins = Poppins({ subsets: ["latin"], weight: ['400', '500', '700', '900'], style: ["italic", "normal"], variable: "--font-poppins" });
 
 export const metadata: Metadata = {
-  title: "Hotel Management App",
+  title: "The Secret Garden Hotel",
   description: "Discover the best hotel rooms",
 };
 
@@ -21,6 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossOrigin="anonymous" />
+      </head>
       <body className={poppins.className}>
           <NextAuthProvider>
             <ThemeProvider>
