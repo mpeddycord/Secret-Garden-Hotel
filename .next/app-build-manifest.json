@@ -37,10 +37,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(web)/auth/page.js"
     ],
-    "/not-found": [
+    "/(cms)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/not-found.js"
+      "static/chunks/app/(cms)/layout.js"
+    ],
+    "/(cms)/studio/[[...index]]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(cms)/studio/[[...index]]/page.js"
+    ],
+    "/(web)/users/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(web)/users/[id]/page.js"
     ]
   }
 }
