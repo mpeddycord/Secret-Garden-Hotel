@@ -8,13 +8,43 @@ import useSWR from "swr";
 import LoadingSpinner from "../../loading";
 import { FaSignOutAlt } from "react-icons/fa";
 import { signOut } from "next-auth/react";
-
+import { useState } from "react";
+import { BsJournalBookmarkFill } from "react-icons/bs";
+import { GiMoneyStack } from "react-icons/gi";
+import Table from "@/src/components/Table/Table";
+import Chart from "@/src/components/Chart/Chart";
+import RatingModal from "@/src/components/RatingModal/RatingModal";
+import Backdrop from "@/src/components/Backdrop/Backdrop";
+import toast from "react-hot-toast";
 
 const UserDetails = (props: {params: {id: string}}) => {
     const {
         params: {id: userId},
     } = props;
 
+    const [currentNav, setCurrentNav] = useState<"bookings" | "amount" | "ratings">("bookings");
+
+    const [roomId, setRoomId] = useState<string | null>(null);
+    const [isRatingVisible, setIsRatingVisible] = useState(false);
+    const [ratingValue, setRatingValue] = useState(0);
+    const [ratingText, setRatingText] = useState('');
+    const [isSubmittingReview, setIsSubmittingReview] = useState(false);
+
+    const toggleRatingModal = () => setIsRatingVisible(prevState => !prevState);
+    const reviewSubmitHandler = async() => {
+        if (!ratingText.trim().length || !ratingValue) {
+            return toast.error("Please provide a rating text and a rating");
+        }
+        
+        if (!roomId) {
+            toast.error('Room not provided');
+        }
+    
+        setIsSubmittingReview(true);
+    };
+
+    
+ 
     const fetchUserBooking = async () => getUserBookings(userId);
     const fetchUserData = async () => {
         const {data} = await axios.get<User>('/api/users');
@@ -79,8 +109,39 @@ const UserDetails = (props: {params: {id: string}}) => {
                         {userData.about ?? ''}
                     </p>
                     <p className="text-xs py-2 font-medium">Joined on {userData._createdAt.split('T')[0]}</p>
+                    <div className="md:hidden flex items-center my-2">
+                        <p className="mr-2">Sign Out</p>
+                        <FaSignOutAlt className="text-3xl cursor-pointer" onClick={() => signOut({callbackUrl: '/'})} />
+                    </div>
+                    <nav className="sticky top-0 px-2 w-fit mx-auto md:w-full md:px-5 py-3 mb-8 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 mt-7">
+                        <ol className={`${currentNav === 'bookings' ? 'text-blue-600': 'text-gray-700'} inline-flex mr-1 md:mr-5 items-center space-x-1 md:space-x-3`}> 
+                            <li className="inline-flex items-center cursor-pointer" onClick={() => setCurrentNav("bookings")}>
+                                <BsJournalBookmarkFill />
+                                <a className="inline-flex items-center mx-1 md:mx-3 text-xs md:text-sm font-medium">Current Bookings</a>
+                            </li>
+                        </ol>
+                        <ol className={`${currentNav === 'amount' ? 'text-blue-600': 'text-gray-700'} inline-flex mr-1 md:mr-5 items-center space-x-1 md:space-x-3`}> 
+                            <li className="inline-flex items-center cursor-pointer" onClick={() => setCurrentNav("amount")}>
+                                <GiMoneyStack />
+                                <a className="inline-flex items-center mx-1 md:mx-3 text-xs md:text-sm font-medium">Amount Spent</a>
+                            </li>
+                        </ol>
+                    </nav>
+                    {currentNav === 'bookings' ? userBookings && <Table bookingDetails={userBookings} setRoomId={setRoomId} toggleRatingModal={toggleRatingModal} /> : <></>}
+
+                    {currentNav === 'amount' ? userBookings && <Chart userBookings={userBookings} /> : <></>}
                 </div>
             </div>
+
+            <RatingModal isOpen={isRatingVisible}
+            ratingValue={ratingValue}
+            setRatingValue={setRatingValue} 
+            ratingText={ratingText}
+            setRatingText={setRatingText}
+            reviewSubmitHandler={reviewSubmitHandler}
+            toggleRatingModal={toggleRatingModal}
+            isSubmittingReview={isSubmittingReview} />
+            <Backdrop isOpen={isRatingVisible} />
         </div>
     )
 };

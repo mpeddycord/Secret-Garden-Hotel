@@ -1,6 +1,4 @@
 {
-  "/api/users/route": "app/api/users/route.js",
-  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
   "/(web)/rooms/[slug]/page": "app/(web)/rooms/[slug]/page.js",
   "/(web)/page": "app/(web)/page.js",
   "/(web)/rooms/page": "app/(web)/rooms/page.js",
