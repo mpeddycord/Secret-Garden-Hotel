@@ -4,19 +4,18 @@ import { useEffect, useState } from "react";
 import ThemeContext from "@/src/context/themeContext";
 
 const ThemeProvider = ({children} : {children: React.ReactNode}) => {
-    if (typeof window !== 'undefined') {
-        const themeFromStorage : boolean = typeof localStorage !== undefined && localStorage.getItem('hotel-theme') ? JSON.parse(localStorage.getItem('hotel-theme')!) : false;
-        const [darkTheme, setDarkTheme] = useState<boolean>(themeFromStorage);
+    const themeFromStorage : boolean = typeof localStorage !== undefined && localStorage.getItem('hotel-theme') ? JSON.parse(localStorage.getItem('hotel-theme')!) : false;
+    const [darkTheme, setDarkTheme] = useState<boolean>(themeFromStorage);
 
-        const [renderComponent, setRenderComponent] = useState(false); 
+    const [renderComponent, setRenderComponent] = useState(false); 
 
-        useEffect(() => {
-            setRenderComponent(true);
-        }, []);
+    useEffect(() => {
+        setRenderComponent(true);
+    }, []);
 
-        if(!renderComponent) {
-            return <></>;
-        }
+    if(!renderComponent) {
+        return <></>;
+    }
 
     return (
         <ThemeContext.Provider value={{darkTheme, setDarkTheme}}>
@@ -25,8 +24,6 @@ const ThemeProvider = ({children} : {children: React.ReactNode}) => {
             </div>
         </ThemeContext.Provider>
     );
-
-    }
-}
+};
 
 export default ThemeProvider;
