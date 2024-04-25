@@ -1,8 +1,7 @@
 {
-  "/api/room-reviews/[id]/route": "app/api/room-reviews/[id]/route.js",
-  "/(web)/rooms/[slug]/page": "app/(web)/rooms/[slug]/page.js",
   "/(web)/page": "app/(web)/page.js",
   "/(web)/rooms/page": "app/(web)/rooms/page.js",
   "/(cms)/studio/[[...index]]/page": "app/(cms)/studio/[[...index]]/page.js",
+  "/(web)/rooms/[slug]/page": "app/(web)/rooms/[slug]/page.js",
   "/(web)/users/[id]/page": "app/(web)/users/[id]/page.js"
 }
