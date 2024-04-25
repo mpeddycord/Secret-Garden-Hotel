@@ -3,11 +3,11 @@ import { BsStarFill } from "react-icons/bs";
 
 type Props = {
     isOpen: boolean;
-    ratingValue: number;
-    setRatingValue: Dispatch<SetStateAction<number>>;
+    ratingValue: number | null;
+    setRatingValue: Dispatch<SetStateAction<number | null>>;
     ratingText: string;
     setRatingText: Dispatch<SetStateAction<string>>;
-    reviewSubmitHandler: () => void;
+    reviewSubmitHandler: () => Promise<string | undefined>;
     isSubmittingReview: boolean;
     toggleRatingModal: () => void;
 };
@@ -23,7 +23,7 @@ const RatingModal: FC<Props> = (props) => {
             <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700">Rating</label>
                 <div className="flex items-center">
-                    {starValues.map(value => <button key={value} onClick={() => setRatingValue(value)} className={`w-6 h-6 ${ratingValue === value ? "text-yellow-500": 'text-grey-300'}`}><BsStarFill /></button>)}
+                    {starValues.map(value => <button key={value} onClick={() => setRatingValue(value)} className={`w-6 h-6 ${ratingValue === value ? "text-yellow-500": 'text-gray-300'}`}><BsStarFill /></button>)}
                 </div>
             </div>
             <div className="mb-4">
