@@ -16,6 +16,7 @@ import Chart from "@/src/components/Chart/Chart";
 import RatingModal from "@/src/components/RatingModal/RatingModal";
 import Backdrop from "@/src/components/Backdrop/Backdrop";
 import toast from "react-hot-toast";
+import Link from "next/link";
 
 const UserDetails = (props: {params: {id: string}}) => {
     const {
@@ -104,7 +105,7 @@ const UserDetails = (props: {params: {id: string}}) => {
                         </h6>
                     </div>
                     <div className="flex items-center">
-                        <p className="mr-2">Sign Out</p>
+                        <Link className="mr-2" href="#" onClick={() => signOut({callbackUrl: '/'})}>Sign Out</Link>
                         <FaSignOutAlt className="text-3xl cursor-pointer" onClick={() => signOut({callbackUrl: '/'})} />
                     </div>
                 </div>
@@ -122,7 +123,7 @@ const UserDetails = (props: {params: {id: string}}) => {
                     </p>
                     <p className="text-xs py-2 font-medium">Joined on {userData._createdAt.split('T')[0]}</p>
                     <div className="md:hidden flex items-center my-2">
-                        <p className="mr-2">Sign Out</p>
+                        <Link className="mr-2" href="#" onClick={() => signOut({callbackUrl: '/'})}>Sign Out</Link>
                         <FaSignOutAlt className="text-3xl cursor-pointer" onClick={() => signOut({callbackUrl: '/'})} />
                     </div>
                     <nav className="sticky top-0 px-2 w-fit mx-auto md:w-full md:px-5 py-3 mb-8 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 mt-7">

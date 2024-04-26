@@ -26,20 +26,40 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="flex-1 md:text-right">
-                    <p className="pb-4">Our Story</p>
-                    <p className="pb-4">Get In Touch</p>
-                    <p className="pb-4">Our Privacy Commitment</p>
-                    <p className="pb-4">Terms and Conditions</p>
-                    <p>Customer Assistance</p>
+                <div className="flex-1 flex-wrap gap-16 items-center justify-between md:text-right">
+                    <div className="text-right mb-2 hover:translate-x-2 duration-500 transition-all">
+                        <Link href="/story">Our Story</Link>
+                    </div>
+                    <div className="text-right mb-2 hover:translate-x-2 duration-500 transition-all">
+                        <Link href="/contact">Get In Touch</Link>
+                    </div>
+                    <div className="text-right mb-2 hover:translate-x-2 duration-500 transition-all">
+                        <Link href="/privacy">Our Privacy Commitment</Link>
+                    </div>
+                    <div className="text-right mb-2 hover:translate-x-2 duration-500 transition-all">
+                        <Link href="/terms">Terms and Conditions</Link>
+                    </div>
+                    <div className="text-right mb-2 hover:translate-x-2 duration-500 transition-all">
+                        <Link href="/assistance">Customer Assistance</Link>
+                    </div>
                 </div>
 
                 <div className="flex-1 md:text-right">
-                    <p className="pb-4">Dining Experience</p>
-                    <p className="pb-4">Wellness</p>
-                    <p className="pb-4">Fitness</p>
-                    <p className="pb-4">Sports</p>
-                    <p>Events</p>
+                    <div className="text-right mb-2 hover:translate-x-2 duration-500 transition-all">
+                        <Link href="/dining">Dining Experience</Link>
+                    </div>
+                    <div className="text-right mb-2 hover:translate-x-2 duration-500 transition-all">
+                        <Link href="/wellness">Wellness</Link>
+                    </div>
+                    <div className="text-right mb-2 hover:translate-x-2 duration-500 transition-all">
+                        <Link href="/fitness">Fitness</Link>
+                    </div>
+                    <div className="text-right mb-2 hover:translate-x-2 duration-500 transition-all">
+                        <Link href="/sports">Sports</Link>
+                    </div>
+                    <div className="text-right mb-2 hover:translate-x-2 duration-500 transition-all">
+                        <Link href="/events">Events</Link>
+                    </div>
                 </div>
             </div>
         </div>

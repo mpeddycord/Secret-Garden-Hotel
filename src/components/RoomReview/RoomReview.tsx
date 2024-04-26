@@ -3,6 +3,7 @@ import axios from 'axios'
 import { FC } from 'react'
 import useSWR from 'swr';
 import Rating from '../Rating/Rating';
+import toast from 'react-hot-toast';
 
 const RoomReview: FC<{roomId: string}> = ({roomId}) => {
 
@@ -18,7 +19,8 @@ const RoomReview: FC<{roomId: string}> = ({roomId}) => {
     }
 
     if (typeof roomReviews === 'undefined' && !isLoading) {
-        throw new Error('Cannot fetch data');
+        toast.error('Cannot fetch reviews');
+        //throw new Error('Cannot fetch data');
     };
 
     return (

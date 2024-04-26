@@ -1,7 +1,10 @@
 {
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/not-found": "app/not-found.js",
+  "/(web)/wellness/page": "app/(web)/wellness/page.js",
   "/(web)/page": "app/(web)/page.js",
-  "/(web)/rooms/page": "app/(web)/rooms/page.js",
-  "/(cms)/studio/[[...index]]/page": "app/(cms)/studio/[[...index]]/page.js",
+  "/(web)/users/[id]/page": "app/(web)/users/[id]/page.js",
   "/(web)/rooms/[slug]/page": "app/(web)/rooms/[slug]/page.js",
-  "/(web)/users/[id]/page": "app/(web)/users/[id]/page.js"
+  "/(web)/dining/page": "app/(web)/dining/page.js",
+  "/(web)/events/page": "app/(web)/events/page.js"
 }
