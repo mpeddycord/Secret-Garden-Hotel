@@ -46,6 +46,17 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(web)/fitness/page.js"
+    ],
+    "/(web)/contact/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(web)/contact/page.js"
+    ],
+    "/(web)/dining/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(web)/dining/page.css",
+      "static/chunks/app/(web)/dining/page.js"
     ]
   }
 }
