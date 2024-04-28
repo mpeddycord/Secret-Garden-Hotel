@@ -1,5 +1,15 @@
 {
   "pages": {
+    "/(cms)/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(cms)/layout.js"
+    ],
+    "/(cms)/studio/[[...index]]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(cms)/studio/[[...index]]/page.js"
+    ],
     "/(web)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -16,91 +26,26 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(web)/loading.js"
     ],
-    "/(web)/rooms/[slug]/page": [
+    "/(web)/rooms/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/(web)/rooms/[slug]/page.css",
-      "static/chunks/app/(web)/rooms/[slug]/page.js"
+      "static/chunks/app/(web)/rooms/page.js"
     ],
     "/(web)/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(web)/page.js"
     ],
-    "/(web)/rooms/page": [
+    "/(web)/rooms/[slug]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(web)/rooms/page.js"
+      "static/css/app/(web)/rooms/[slug]/page.css",
+      "static/chunks/app/(web)/rooms/[slug]/page.js"
     ],
-    "/(web)/auth/page": [
+    "/(web)/fitness/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(web)/auth/page.js"
-    ],
-    "/(cms)/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(cms)/layout.js"
-    ],
-    "/(cms)/studio/[[...index]]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(cms)/studio/[[...index]]/page.js"
-    ],
-    "/(web)/users/[id]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(web)/users/[id]/page.js"
-    ],
-    "/(web)/contact/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(web)/contact/page.js"
-    ],
-    "/(web)/wellness/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(web)/wellness/page.js"
-    ],
-    "/(web)/story/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(web)/story/page.js"
-    ],
-    "/(web)/privacy/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(web)/privacy/page.js"
-    ],
-    "/(web)/dining/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(web)/dining/page.js"
-    ],
-    "/(web)/terms/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(web)/terms/page.js"
-    ],
-    "/(web)/assistance/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(web)/assistance/page.js"
-    ],
-    "/(web)/sports/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(web)/sports/page.js"
-    ],
-    "/(web)/events/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(web)/events/page.js"
-    ],
-    "/not-found": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/not-found.js"
+      "static/chunks/app/(web)/fitness/page.js"
     ]
   }
 }

@@ -29,13 +29,12 @@ const hotelRoom = {
             name: 'description',
             title: 'Description',
             type: 'text',
-            validation: Rule => Rule.required().min(100).error('Minimum 100 characters'),
+            validation: Rule => Rule.required().min(50).error('Minimum 50 characters'),
         }),
         defineField({
             name: 'price',
             title: 'Price',
             type: 'number',
-            validation: Rule => Rule.required().min(100).error('Minimum 100 characters'),
         }),
         defineField({
             name: 'discount',
@@ -55,7 +54,7 @@ const hotelRoom = {
                 ],
             },
             ],
-            validation: Rule => Rule.required().min(3).error("Minumum of 3 images required")       
+            validation: Rule => Rule.required().min(1).error("Minumum of 1 image required")       
          }),
          defineField({
             name: 'coverImage',
